@@ -1,1 +1,2 @@
-# sales-forecast-time-series
+# sales-forecasting
+ Sales forecasting with fbprophet and arima
