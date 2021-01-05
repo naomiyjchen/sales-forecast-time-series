@@ -147,6 +147,22 @@ def make_dataframe(arr, df_true):
 
 
 
+def plot_train_and_test(df_tst, df_tr):
+    '''
+    plot line graphs of test data and training data into a graph
+    
+    df_pred: dataframe, has column 'ds' (Datetime variable), 'y'
+    df_tr: dataframe, training data, has columns 'ds', 'y'
+    '''
+    f, ax = plt.subplots(figsize=(16,5)) #make empty graph
+    df_tst.plot(kind='line',x='ds', y='y', color='green', label='Test', ax=ax)
+    df_tr.plot(kind='line',x='ds',y='y', color='blue',label='Train', ax=ax)
+    
+    plt.legend()    
+    plt.title(' y Train and Test')
+    plt.show()
+
+
 def plot_predict_and_actual(df_pred, df_tr):
     '''
     plot line graphs of prediction value and actual value into a graph
@@ -163,6 +179,9 @@ def plot_predict_and_actual(df_pred, df_tr):
     plt.title(' y Forecast and Actual')
     plt.show()
 
+    
+    
+    
 
 def plot_predict_vs_actual(df_pred, df_true, date_type, start_date, end_date):
     '''
