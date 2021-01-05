@@ -1,5 +1,6 @@
 # sales-forecast-time-series
 This project aims to predict one year of future sales/revenue value with historical transaction data.
+Mode detail explantion of the code is still needed to be added.
 
 Currently, I have implemented two models:
 - ARIMA
